@@ -1,0 +1,74 @@
+.contenido-principal {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.enlace-volver {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  color: #294d3d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.enlace-volver:hover {
+  text-decoration: underline;
+}
+
+.lista-sagas,
+.lista-libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.lista-sagas > .tarjeta-saga,
+.lista-libros > .tarjeta-libro {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .lista-sagas,
+  .lista-libros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .lista-sagas .tarjeta-saga-contenido,
+  .lista-libros .tarjeta-libro-contenido {
+    flex: 1;
+    height: auto;
+    padding: 12px;
+  }
+
+  .lista-sagas .tarjeta-saga-contenido h2,
+  .lista-libros .tarjeta-libro-contenido h2 {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalogo-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .catalogo-encabezado > .buscador {
+    margin-bottom: 0;
+  }
+
+  #titulo-sagas {
+    order: -1;
+    flex-shrink: 0;
+    margin: 0;
+    font-size: 64px;
+    line-height: 1.1;
+  }
+}

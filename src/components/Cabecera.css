@@ -1,0 +1,46 @@
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #294d3d;
+  color: white;
+}
+
+.cabecera-titulo {
+  color: inherit;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cabecera-descripcion {
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+
+.cabecera-navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cabecera-navegacion a {
+  display: inline-block;
+  padding: 8px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cabecera-navegacion a:hover,
+.cabecera-navegacion a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.cabecera a:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
